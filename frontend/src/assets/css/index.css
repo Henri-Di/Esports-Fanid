@@ -1,0 +1,175 @@
+/* ========================================== */
+/* Reset Global */
+/* ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================== */
+/* Configurações base de HTML e Body */
+/* ========================================== */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 16px;
+}
+
+/* ========================================== */
+/* Containers gerais: Logo + Form */
+/* ========================================== */
+.container-logo,
+.container-form {
+    width: 100%;
+    max-width: 480px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================== */
+/* Seção: Logo */
+/* ========================================== */
+.container-logo h5 {
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    color: #333333;
+}
+
+.container-logo img {
+    height: clamp(2.5rem, 6vw, 3.5rem);
+    width: auto;
+    margin: 0 auto;
+}
+
+/* ========================================== */
+/* Seção: Formulário de Login */
+/* ========================================== */
+.container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+}
+
+.container form label {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333333;
+    background-color: #f9f9f9;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.container form input {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #cccccc;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container form input:focus {
+    border-color: #444444;
+    box-shadow: 0 0 6px rgba(68, 68, 68, 0.3);
+    outline: none;
+}
+
+.container form button {
+    padding: 10px;
+    background-color: #333333;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.container form button:hover {
+    background-color: #444444;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.container form button:focus {
+    outline: 2px solid #666666;
+    outline-offset: 2px;
+}
+
+#btn-login {
+    margin-top: 10px;
+}
+
+/* ========================================== */
+/* Responsividade fluida */
+/* ========================================== */
+
+/* Telas grandes */
+@media (min-width: 1200px) {
+    .container-logo,
+    .container-form {
+        max-width: 400px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .container-logo,
+    .container-form {
+        max-width: 60%;
+    }
+}
+
+/* Tablets pequenos */
+@media (max-width: 768px) {
+    .container-logo,
+    .container-form {
+        max-width: 75%;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 480px) {
+    .container-logo,
+    .container-form {
+        max-width: 95%;
+        padding: 1.5rem;
+    }
+
+    .container form button {
+        padding: 12px;
+    }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 360px) {
+    .container-logo,
+    .container-form {
+        padding: 1rem;
+    }
+
+    .container form button {
+        padding: 10px;
+    }
+}

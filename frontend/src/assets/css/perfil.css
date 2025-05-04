@@ -1,0 +1,139 @@
+/* Reset simples */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo com fundo leve */
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: #f0f2f5;
+    padding: 10px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Container de logo e título */
+.container-logo {
+    text-align: center;
+}
+
+.container-logo h5 {
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #333333;
+}
+
+.container-logo img {
+    height: clamp(2.5rem, 8vw, 4rem);
+    width: auto;
+}
+
+/* Título do formulário */
+.container-form h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: #333333;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Estilos para o formulário */
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    padding-bottom: 0.5rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333333;
+    border-bottom: 1px solid #333333;
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+    width: 50rem;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #333333;
+    box-shadow: 0 0 8px rgba(51, 51, 51, 0.1);
+}
+
+/* Botão */
+.container-btn-perfil {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #444444;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade fluida com clamp e containers flexíveis */
+@media (min-width: 768px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 900px;
+    }
+}
