@@ -99,6 +99,7 @@ $eventos = $stmt_eventos->fetchAll();
 <div id="loader">
     <div class="loader-spinner"></div> 
 </div>
+
     <div class="sidebar">
         <div class="container container-logo">
     <h5>
@@ -112,11 +113,12 @@ $eventos = $stmt_eventos->fetchAll();
             <li><a href="../../../frontend/src/pages/dashboard.php">Início</a></li>
             <li><a href="../../../frontend/src/pages/perfil2.php">Perfil</a></li>
             <li><a href="#">Eventos</a></li>
-            <li><a href="../../../backend/app/logout.php">Sair</a></li>
+            <li><a href="../../../backend/app/pages/app-valida-logout.php">Sair</a></li>
         </ul>
     </div>
 
     <div class="content">
+    <p id="" style="color: #000000; font-weight: 600; font-size: 1rem; padding-bottom: 20px;">BEM-VINDO, <?php echo $_SESSION['nome']; ?></p>
         <div class="header">
             <div class="search-bar">
             <form id="search-form">
